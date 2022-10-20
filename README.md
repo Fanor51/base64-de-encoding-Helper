@@ -1,2 +1,5 @@
 # base64-de-encoding-Helper
 AWS Serverless Image Handler base64 de/encoding Helper
+
+php app.php app:EncodeCommand c378c23b-aadd-4e57-9407-46b37447063b.jpg 1666216668
+php app.php app:DecodeCommand eyJrZXkiOiJjMzc4YzIzYi1hYWRkLTRlNTctOTQwNy00NmIzNzQ0NzA2M2IuanBnIiwib3V0cHV0Rm9ybWF0IjoianBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NTIyLCJoZWlnaHQiOjM5MSwiZml0IjoiaW5zaWRlIn0sImpwZWciOnsicXVhbGl0eSI6OTV9fX0 1 1
