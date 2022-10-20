@@ -4,8 +4,8 @@
 
 require __DIR__.'/vendor/autoload.php';
 
-use App\Command\DecodeCommand;
-use App\Command\EncodeCommand;
+use Fanor51\Base64\Command\DecodeCommand;
+use Fanor51\Base64\Command\EncodeCommand;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Dotenv\Dotenv;
 
