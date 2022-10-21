@@ -11,7 +11,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Filesystem\Filesystem;
 
-// the name of the command is what users type after "php bin/console"
 #[AsCommand(name: 'app:DecodeCommand')]
 class DecodeCommand extends Command
 {
@@ -61,6 +60,8 @@ class DecodeCommand extends Command
 
             $filesystem->mkdir($saveDir);
             $filesystem->dumpFile($saveDir . $jsonFileName . '.json', $json);
+
+            $io->note('File SAVED: ' . $saveDir . $jsonFileName . '.json');
         }
 
         return command::SUCCESS;

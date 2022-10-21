@@ -11,7 +11,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Filesystem\Filesystem;
 
-// the name of the command is what users type after "php bin/console"
 #[AsCommand(name: 'app:EncodeCommand')]
 class EncodeCommand extends Command
 {
@@ -43,11 +42,15 @@ class EncodeCommand extends Command
         $jsonConfig = json_decode($jsonConfig, true, 512, JSON_THROW_ON_ERROR);
         $jsonConfig['key'] = $imageString;
 
+        $string = base64_encode(json_encode($jsonConfig, JSON_THROW_ON_ERROR));
         if (isset($_ENV['CLOUDFRONT_URL'])) {
-            $io->note($_ENV['CLOUDFRONT_URL']);
+            $io->writeln('CDN URL = ' . $_ENV['CLOUDFRONT_URL']);
+            $io->writeln('Complete URL  = ' . $_ENV['CLOUDFRONT_URL'] . $string);
+        } else {
+            $io->writeln('base64 String');
+            $io->writeln($string);
         }
 
-        echo(base64_encode(json_encode($jsonConfig, JSON_THROW_ON_ERROR)));
         $io->newLine(2);
 
         return command::SUCCESS;
