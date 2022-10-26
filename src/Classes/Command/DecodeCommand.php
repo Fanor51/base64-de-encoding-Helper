@@ -61,7 +61,11 @@ class DecodeCommand extends Command
             $filesystem->mkdir($saveDir);
             $filesystem->dumpFile($saveDir . $jsonFileName . '.json', $json);
 
-            $io->note('File SAVED: ' . $saveDir . $jsonFileName . '.json');
+            $io->definitionList(
+                ['Config' => 'Saved'],
+                ['Dir' => $saveDir ?? 'n.A',],
+                ['Filename' => $jsonFileName . 'json' ?? 'n.A']
+            );
         }
 
         return command::SUCCESS;
