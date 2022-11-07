@@ -14,6 +14,8 @@ use Symfony\Component\Filesystem\Filesystem;
 #[AsCommand(name: 'app:DecodeCommand')]
 class DecodeCommand extends Command
 {
+    public const DEFAULT_VALUE = 'n.A';
+
     protected function configure()
     {
         $this->addArgument('hashString', InputArgument::REQUIRED, 'Image hash');
@@ -41,9 +43,9 @@ class DecodeCommand extends Command
         $data = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
 
         $io->definitionList(
-            ['Hash' => $hashString ?? 'n.A',],
-            ['Image' => $data['key'] ?? 'n.A'],
-            ['outputFormat' => $data['outputFormat'] ?? 'n.A']
+            ['Hash' => $hashString ?? self::DEFAULT_VALUE,],
+            ['Image' => $data['key'] ?? self::DEFAULT_VALUE],
+            ['outputFormat' => $data['outputFormat'] ?? self::DEFAULT_VALUE]
         );
 
         if (filter_var($input->getArgument('config'), FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE)) {
