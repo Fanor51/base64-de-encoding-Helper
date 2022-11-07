@@ -3,7 +3,7 @@
 
 This small tool is developed and used for debugging Image URLs from for example
 an [AWS Serverless Image Handler](https://aws.amazon.com/de/solutions/implementations/serverless-image-handler/) which
-use base64 encoded JSON Configs in their urls.
+use base64 encoded JSON configs in their urls.
 ---
 ## Function Table
 
