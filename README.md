@@ -1,7 +1,7 @@
 # base64-de-encoding-Helper (AWS Serverless Image Handler)
 ![PHP Linting](https://github.com/Fanor51/base64-de-encoding-Helper/actions/workflows/ci.yaml/badge.svg)
 
-This small tool is developed and used for debugging Image URL´s from f.E.
+This small tool is developed and used for debugging Image URLs from for example
 an [AWS Serverless Image Handler](https://aws.amazon.com/de/solutions/implementations/serverless-image-handler/) which
 use base64 encoded JSON Configs in their urls.
 ---
@@ -26,7 +26,7 @@ php app.php app:EncodeCommand c378c23b-aadd-4e57-9407-46b37447063b.jpg 166621666
 ```
 
 ### app:DecodeCommand
-Decode the following URL String, print a Verbose output on the CLI and save the json config with the current timestamp as name under ``config/json/{currentTimestamp}.json``
+Decode the following URL string, print a verbose output on the CLI and save the json config with the current timestamp as name under ``config/json/{currentTimestamp}.json``
 ```
 php app.php app:DecodeCommand eyJrZXkiOiJjMzc4YzIzYi1hYWRkLTRlNTctOTQwNy00NmIzNzQ0NzA2M2IuanBnIiwib3V0cHV0Rm9ybWF0IjoianBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NTIyLCJoZWlnaHQiOjM5MSwiZml0IjoiaW5zaWRlIn0sImpwZWciOnsicXVhbGl0eSI6OTV9fX0
 1 1
