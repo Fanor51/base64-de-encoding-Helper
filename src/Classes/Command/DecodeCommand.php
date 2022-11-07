@@ -16,7 +16,7 @@ class DecodeCommand extends Command
 {
     protected function configure()
     {
-        $this->addArgument('hashString', InputArgument::REQUIRED, 'Image Hash');
+        $this->addArgument('hashString', InputArgument::REQUIRED, 'Image hash');
         $this->addArgument('config', InputArgument::OPTIONAL, 'Show whole config');
         $this->addArgument(
             'saveConfig',
